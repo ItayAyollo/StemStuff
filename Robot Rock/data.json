@@ -1,7 +1,7 @@
 {
-    "Name" : "Bohemian Rhapsody",
-    "Track1URL" : "https://github.com/ItayAyollo/StemStuff/raw/main/Bohemian%20Rhapsody/2%20Bass%20_%20Keys.mp3",
-    "Track2URL" : "https://github.com/ItayAyollo/StemStuff/raw/main/Bohemian%20Rhapsody/1%20Vocals.mp3",
-    "Track3URL" : "https://github.com/ItayAyollo/StemStuff/raw/main/Bohemian%20Rhapsody/3%20Drums.mp3",
-    "Track4URL" : "https://github.com/ItayAyollo/StemStuff/raw/main/Bohemian%20Rhapsody/4%20Guitar%20_%20Backing.mp3"
+    "Name" : "Robot Rock",
+    "Track1URL" : "https://github.com/ItayAyollo/StemStuff/raw/main/Robot%20Rock/02%20-%20Robot%20Rock_bass.mp3",
+    "Track2URL" : "https://github.com/ItayAyollo/StemStuff/raw/main/Robot%20Rock/04%20-%20Robot%20Rock_other.mp3",
+    "Track3URL" : "https://github.com/ItayAyollo/StemStuff/raw/main/Robot%20Rock/03%20-%20Robot%20Rock_drums.mp3",
+    "Track4URL" : "https://github.com/ItayAyollo/StemStuff/raw/main/Robot%20Rock/01%20-%20Robot%20Rock_vocals.mp3"
 }
