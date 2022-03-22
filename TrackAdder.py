@@ -4,6 +4,8 @@ from tkinter import messagebox
 from tkinter.filedialog import askopenfilename
 import os
 import shutil
+from pydub import AudioSegment
+from pathlib import Path
 
 
 window = tk.Tk()
@@ -86,15 +88,32 @@ def updatejson():
         path3 = path3text.get("1.0", tk.END + "-1c")
         path4 = path4text.get("1.0", tk.END + "-1c")
 
-        shutil.copy(path1, trackname + '/')
-        shutil.copy(path2, trackname + '/')
-        shutil.copy(path3, trackname + '/')
-        shutil.copy(path4, trackname + '/')
+        #compressing the tracks and turning them into mp3's if needed.
+        #track1
+        sound = AudioSegment.from_file(path1)
+        track1corrected = Path(path1).stem #hehe stem
+        sound.export(trackname + '/' + track1corrected + '.mp3', format="mp3", bitrate="128k")
+        
+        #track2
+        sound = AudioSegment.from_file(path2)
+        track2corrected = Path(path2).stem
+        sound.export(trackname + '/' + track2corrected + '.mp3', format="mp3", bitrate="128k")
+        
+        #track3
+        sound = AudioSegment.from_file(path3)
+        track3corrected = Path(path3).stem
+        sound.export(trackname + '/' + track3corrected + '.mp3', format="mp3", bitrate="128k")
+        
+        #track4
+        sound = AudioSegment.from_file(path4)
+        track4corrected = Path(path4).stem
+        sound.export(trackname + '/' + track4corrected + '.mp3', format="mp3", bitrate="128k")
 
         track1 = os.path.basename(path1)
         track2 = os.path.basename(path2)
         track3 = os.path.basename(path3)
         track4 = os.path.basename(path4)
+
 
         tracknameCorrectedForURL = trackname.replace(" ", "%20")
 
