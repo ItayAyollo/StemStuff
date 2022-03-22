@@ -103,6 +103,8 @@ def updatejson():
         track3 = "https://github.com/spicyshotz/StemStuff/raw/main/" + tracknameCorrectedForURL + '/' + track3
         track4 = "https://github.com/spicyshotz/StemStuff/raw/main/" + tracknameCorrectedForURL + '/' + track4
 
+        datajsonURL = "https://raw.githubusercontent.com/spicyshotz/StemStuff/main/" + tracknameCorrectedForURL + "/data.json"
+
         with open(trackname + '/data.json', "r") as jsonFile:
             data = json.load(jsonFile)
 
@@ -113,6 +115,15 @@ def updatejson():
         data["Track4URL"] = track4
         with open(trackname + '/data.json', "w") as jsonFile:
             json.dump(data, jsonFile)
+
+        addthis = trackname + "~" + datajsonURL
+        with open("tracks.json", "r") as jsonFile:
+            data = json.load(jsonFile)
+
+        data["tracks"].append(addthis)
+        with open("tracks.json", "w") as jsonFile:
+            json.dump(data, jsonFile)
+        
         messagebox.showinfo("Done", 'Added track "' + trackname + '" to playlist')
     else:
         messagebox.showinfo("Track Already Exists", 'track"' + trackname + '" alreay exists. Delete it or rename your track.')
