@@ -109,11 +109,10 @@ def updatejson():
         track4corrected = Path(path4).stem
         sound.export(trackname + '/' + track4corrected + '.mp3', format="mp3", bitrate="128k")
 
-        track1 = os.path.basename(path1)
-        track2 = os.path.basename(path2)
-        track3 = os.path.basename(path3)
-        track4 = os.path.basename(path4)
-
+        track1 = track1corrected + '.mp3'
+        track2 = track2corrected + '.mp3'
+        track3 = track3corrected + '.mp3'
+        track4 = track4corrected + '.mp3'
 
         tracknameCorrectedForURL = trackname.replace(" ", "%20")
 
